@@ -1,0 +1,146 @@
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #4f46e5;
+  --background-color: #f8fafc;
+  --text-color: #1e293b;
+  --card-background: #ffffff;
+  
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: var(--text-color);
+  background-color: var(--background-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  padding: 4rem 2rem;
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: slideDown 0.5s ease-out;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  opacity: 0.9;
+  animation: slideUp 0.5s ease-out;
+}
+
+.category-section {
+  padding: 2rem 0;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.movie-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.movie-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.movie-image img {
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover .movie-image img {
+  transform: scale(1.05);
+}
+
+.price-tag {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-weight: bold;
+  animation: bounce 0.5s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.p-menubar {
+  background: transparent !important;
+  border: none !important;
+  padding: 1rem 2rem !important;
+}
+
+.p-card {
+  border-radius: 1rem !important;
+  overflow: hidden !important;
+}
+
+.p-button {
+  border-radius: 0.5rem !important;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 1rem;
+  animation: slideDown 0.5s ease-out;
+}
